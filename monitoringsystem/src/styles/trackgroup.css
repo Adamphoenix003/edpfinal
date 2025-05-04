@@ -1,0 +1,232 @@
+/* Importing the Orbitron font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Root variables */
+:root {
+    --primary-color: #00ff00;  /* Neon green */
+    --secondary-color: rgba(0, 255, 0, 0.7);  /* Transparent neon green */
+    --background-color: #0a0a0a;  /* Dark background */
+    --text-color: #ffffff;  /* White text */
+    --border-color: #00ff00;  /* Neon green border */
+}
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;  /* Sci-fi font */
+}
+
+/* Authentication container */
+.auth-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Card for the form */
+.auth-card {
+    background: rgba(0, 0, 0, 0.9);  /* Darker background for the card */
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 20px var(--secondary-color);  /* Neon glow around the card */
+    border: 2px solid var(--border-color);  /* Neon green border */
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Title of the form */
+.auth-title {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Input field styles */
+.auth-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: transparent;
+    border: 2px solid var(--border-color);  /* Neon green border */
+    color: var(--primary-color);  /* Neon green text */
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Placeholder text styles */
+.auth-input::placeholder {
+    color: rgba(0, 255, 0, 0.5);  /* Lighter neon green placeholder */
+    text-transform: uppercase;
+}
+
+/* Focus effect for inputs */
+.auth-input:focus {
+    border-color: var(--secondary-color);  /* Darker neon glow on focus */
+    box-shadow: 0 0 10px var(--secondary-color);  /* Glowing effect around input */
+}
+
+/* Submit button styles */
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: var(--primary-color);  /* Neon green background */
+    color: black;  /* Black text on the button */
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+/* Hover effect for the button */
+.auth-button:hover {
+    background: #008f00;  /* Darker green on hover */
+    box-shadow: 0 0 10px var(--secondary-color);  /* Glowing effect on hover */
+}
+
+/* Error message styles */
+.auth-error {
+    color: red;  /* Error messages in red */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Animation for the card */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);  /* Slide in from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);  /* Final position */
+    }
+}
+/* TrackGroup Styles */
+.track-group-container {
+    padding: 20px;
+    background: #0a0a0a;
+    color: white;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    border: 2px solid #00ff00;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* Dropdown will now show on hover */
+  .search-bar:hover .dropdown {
+    display: block;
+  }
+  
+  .search-bar .dropdown {
+    display: none;  /* Initially hidden */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .search-bar .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    border-bottom: 1px solid #00ff00;
+  }
+  
+  .search-bar .dropdown-item:hover {
+    background-color: #00ff00;
+  }
+  
+  .group-members {
+    margin-top: 20px;
+  }
+  
+  .members-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: left; /* Ensures space between cards */
+  }
+  
+  .member-card {
+    width: 300px; /* Ensures 4 cards per row with some space between them */
+    height: 400px; /* Increase the height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 50px;
+    color: white;
+    box-sizing: border-box;
+    background-color: #333;
+  }
+  
+  .member-image {
+    width: 80px; /* Increased image size */
+    height: 80px; /* Increased image size */
+    background-color: #333;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .member-info {
+    text-align: center;
+  }
+  
+  .member-code {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 1200px) {
+    .member-card {
+      width: calc(33.33% - 15px); /* 3 cards per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .member-card {
+      width: calc(50% - 15px); /* 2 cards per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .member-card {
+      width: 100%; /* 1 card per row on very small screens */
+    }
+  }
+  

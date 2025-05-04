@@ -1,0 +1,120 @@
+/* Importing the Orbitron font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Root variables */
+:root {
+    --primary-color: #00ff00;  /* Neon green */
+    --secondary-color: rgba(0, 255, 0, 0.7);  /* Transparent neon green */
+    --background-color: #0a0a0a;  /* Dark background */
+    --text-color: #ffffff;  /* White text */
+    --border-color: #00ff00;  /* Neon green border */
+}
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;  /* Sci-fi font */
+}
+
+/* Authentication container */
+.auth-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Card for the form */
+.auth-card {
+    background: rgba(0, 0, 0, 0.9);  /* Darker background for the card */
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 20px var(--secondary-color);  /* Neon glow around the card */
+    border: 2px solid var(--border-color);  /* Neon green border */
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Title of the form */
+.auth-title {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Input field styles */
+.auth-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: transparent;
+    border: 2px solid var(--border-color);  /* Neon green border */
+    color: var(--primary-color);  /* Neon green text */
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Placeholder text styles */
+.auth-input::placeholder {
+    color: rgba(0, 255, 0, 0.5);  /* Lighter neon green placeholder */
+    text-transform: uppercase;
+}
+
+/* Focus effect for inputs */
+.auth-input:focus {
+    border-color: var(--secondary-color);  /* Darker neon glow on focus */
+    box-shadow: 0 0 10px var(--secondary-color);  /* Glowing effect around input */
+}
+
+/* Submit button styles */
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: var(--primary-color);  /* Neon green background */
+    color: black;  /* Black text on the button */
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+/* Hover effect for the button */
+.auth-button:hover {
+    background: #008f00;  /* Darker green on hover */
+    box-shadow: 0 0 10px var(--secondary-color);  /* Glowing effect on hover */
+}
+
+/* Error message styles */
+.auth-error {
+    color: red;  /* Error messages in red */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Animation for the card */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);  /* Slide in from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);  /* Final position */
+    }
+}
